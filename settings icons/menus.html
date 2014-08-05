@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+    body > div {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+    }
+
+    body > div > div {
+        margin: 25px;
+    }
+
+    /* menu 1 */
+
+    .menu1 {
+        background: black;
+        height: 50px;
+        width: 50px;
+        position: relative;
+    }
+
+    .menu1:before, .menu1:after {
+        transition: all 0.5s;
+        content: '';
+        width: 50px;
+        height: 10px;
+        position: absolute;
+        background: white;
+    }
+
+    .menu1:before {
+        top: 10px;
+    }
+
+    .menu1:after {
+        top: 30px;
+    }
+
+    .menu1:hover:before {
+        -webkit-transform: rotate(45deg);
+        top: 20px;
+    }
+
+    .menu1:hover:after {
+        -webkit-transform: rotate(-45deg);
+        top: 20px;
+    }
+
+    /* menu 2 */
+
+    .menu2 {
+        background: white;
+        height: 50px;
+        width: 50px;
+        position: relative;
+    }
+
+    .menu2:before, .menu2:after, .menu2 > div {
+        transition: all 0.5s;
+        content: '';
+        width: 50px;
+        height: 10px;
+        position: absolute;
+        background: black;
+    }
+
+    .menu2 > div {
+        top: 20px;
+        transition: all 0.3s;
+    }
+
+    .menu2:before {
+        top: 0;
+    }
+
+    .menu2:after {
+        top: 40px;
+    }
+
+    .menu2:hover:before {
+        -webkit-transform: rotate(45deg);
+        top: 20px;
+    }
+
+    .menu2:hover > div {
+        background: transparent;
+    }
+
+    .menu2:hover:after {
+        -webkit-transform: rotate(-45deg);
+        top: 20px;
+    }
+
+    /* menu 3 */
+
+    .menu3 {
+        background: white;
+        height: 50px;
+        width: 50px;
+        position: relative;
+    }
+
+    .menu3:before, .menu3:after, .menu3 > div:before, .menu3 > div:after {
+        content: '';
+        width: 50px;
+        height: 10px;
+        position: absolute;
+        background: black;
+        transition: all 0.4s;
+        border-radius: 8px;
+    }
+
+    .menu3 > div {
+        top: 20px;
+        width: 50px;
+        height: 10px;
+        position: absolute;
+        border-radius: 8px;
+    }
+
+    .menu3:before {
+        top: 0;
+    }
+
+    .menu3:after {
+        top: 40px;
+    }
+
+    .menu3:hover:before, .menu3:hover:after {
+        background: transparent;
+    }
+
+    .menu3:hover > div:before {
+        -webkit-transform: rotate(45deg);
+    }
+
+    .menu3:hover > div {
+        background: transparent;
+    }
+
+    .menu3:hover > div:after {
+        -webkit-transform: rotate(-45deg);
+    }
+
+</style>
+
+</head>
+<body>
+
+<div>
+    <div class="menu1"></div>
+</div>
+
+<div>
+    <div class="menu2">
+        <div></div>
+    </div>
+</div>
+
+<div>
+    <div class="menu3">
+        <div></div>
+    </div>
+</div>
+
+</body>
+</html>
